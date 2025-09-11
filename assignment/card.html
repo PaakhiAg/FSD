@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flexbox Cards</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    .cards {
+      display: flex;
+      gap: 20px;
+    }
+    .card {
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      overflow: hidden;
+      width: 300px;
+      background-color: bisque;
+    }
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+    .card p {
+      padding: 10px;
+    }
+  </style>
+</head>
+<body>
+    <h1>GRAB A BITE!</h1>
+  <div class="cards">
+    <div class="card">
+      <img src="burger.png">
+      <p>Veg Makhani Burger</p>
+    </div>
+    <div class="card">
+      <img src="pizza.png">
+      <p>Cheesy Pizza!</p>
+    </div>
+    <div class="card">
+      <img src="pasta.png">
+      <p>White Sauce Pasta</p>
+    </div>
+  </div>
+</body>
+</html>
