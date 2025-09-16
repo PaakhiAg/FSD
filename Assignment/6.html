@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var a=prompt("enter a:");
+        var b=prompt("enter b:");
+        var even=[],odd=[];
+
+        document.write("<h2>Table of " + a + "</h2>");
+        for( i=1;i<=10;i++)
+    {
+        document.write(a +"x"+i+"="+(a*i)+"<br>");
+    }
+
+    document.write("<h2>Table of " + a + "</h2>");
+    for( i=1;i<=10;i++)
+    {
+        document.write(b +"x"+i+"="+(b*i)+"<br>");
+
+    }
+
+    document.write("<hr>");
+    document.write("<h2>Even=</h2>");
+    for( i=1;i<=10;i++)
+    {
+        var productA = a * i;
+        var productB = b * i;
+        if (productA % 2 == 0)
+         {
+                document.write(productA + "<br>");
+            }
+        if (productB % 2 == 0)
+         {
+                document.write(productB + "<br>");
+            }
+
+    }
+
+    document.write("<h2>Odd=</h2>");
+    for( i=1;i<=10;i++)
+    {
+        var productA = a * i;
+            var productB = b * i;
+
+            if (productA % 2 != 0) {
+                document.write(productA + "<br>");
+            }
+            if (productB % 2 != 0) {
+                document.write(productB + "<br>");
+            }
+    }
+    </script>
+</body>
+</html>
