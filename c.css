@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+section{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-image: url('pic1.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+}
+section .wave{
+    width: 100%;
+    position: absolute;
+    height: 143px;
+    bottom: 0;
+    left: 0;
+    background-image: url('pic2.png');
+    animation: animate 10s linear infinite;
+}
+section .wave::before{
+    width: 100%;
+    position: absolute;
+    height: 143px;
+    top: 0;
+    left: 0;
+    opacity: 0.4;
+    background-image: url(../file.png);
+    animation: animate-reverse 10s linear infinite ;
+}
+@keyframes animate{
+    0%{
+        background-position: 0px;
+    }
+    100%{
+        background-position: 1300px;
+    }
+}

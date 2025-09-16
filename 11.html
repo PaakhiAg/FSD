@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    function d()
+    {
+        var a=document.f.n.value;
+        var b=document.f.p.value;
+        if(a==null || a=="")
+    {
+        alert("name should not be empty");
+        return false;
+    }
+    else if(b.length<10)
+    {
+        alert("length is less than 10");
+        return false;
+    }
+    }
+</script>
+<body>
+    <form name="f" onsubmit="return d()"
+    
+</body>
+</html>

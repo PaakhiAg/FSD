@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Flipkart</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #c8c7c7;
+        }
+
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .logo img {
+            height: 40px;
+        }
+
+        .search-bar {
+            flex: 1;
+            margin: 0 20px;
+            position: relative;
+        }
+
+        .search-bar input {
+            width: 90%;
+            padding: 8px 12px 8px 35px; 
+            border-radius: 3px;
+            border: 1px solid #ccc;
+            background-color: rgb(224, 228, 253);
+            background-image: url('https://cdn-icons-png.flaticon.com/512/622/622669.png');
+            background-repeat: no-repeat;
+            background-position: left 10px center; 
+            background-size: 20px;
+            font-size: 14px;
+        }
+
+        .header-right {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .dots {
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        .categories {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .category-item {
+            text-align: center;
+            background-color: #f0f0ee;
+            padding: 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            cursor: pointer;
+        }
+
+        .category-item:hover {
+            background-color: #f9eac4;
+        }
+
+        .category-item img {
+            width: 60px;
+            height: 60px;
+            object-fit: contain;
+            margin-bottom: 5px;
+        }
+
+        .text:hover {
+            color: rgb(159, 4, 4);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <div class="logo">
+            <img src="flipkart.png" alt="Flipkart Logo">
+        </div>
+
+        <div class="search-bar">
+            <input type="text" placeholder="Search for products, brands and more"/>
+        </div>
+
+        <div class="header-right">
+            <div>Login</div>
+            <div>Cart</div>
+            <div>Become a Seller</div>
+            <div class="dots">&#8942;</div> 
+        </div>
+    </div>
+
+    <div class="categories">
+        <div class="category-item">
+            <img src="Screenshot 2025-09-09 151713.png" alt="Home and Furniture"/>
+            <div class="text">Home and Furniture</div>
+        </div>
+        <div class="category-item">
+            <img src="Screenshot 2025-09-09 151719.png" alt="Mobiles & Tablets"/>
+            <div class="text">Mobiles & Tablets</div>
+        </div>
+        <div class="category-item">
+            <img src="Screenshot 2025-09-09 151725.png" alt="Fashion"/>
+            <div class="text">Fashion</div>
+        </div>
+        <div class="category-item">
+            <img src="Screenshot 2025-09-09 151730.png" alt="Electronics"/>
+            <div class="text">Electronics</div>
+        </div>
+        <div class="category-item">
+            <img src="Screenshot 2025-09-09 153711.png" alt="TV & Appliances"/>
+            <div class="text">TV & Appliances</div>
+        </div>
+        <div class="category-item">
+            <img src="Screenshot 2025-09-09 153716.png" alt="Flight Bookings"/>
+            <div class="text">Flight Bookings</div>
+        </div>
+        <div class="category-item">
+            <img src="Screenshot 2025-09-09 153721.png" alt="Beauty, Food"/>
+            <div class="text">Beauty, Food</div>
+        </div>
+        <div class="category-item">
+            <img src="Screenshot 2025-09-09 153726.png" alt="Grocery"/>
+            <div class="text">Grocery</div>
+        </div>
+    </div>
+
+</body>
+</html>
