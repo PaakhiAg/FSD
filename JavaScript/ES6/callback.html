@@ -7,18 +7,37 @@
 </head>
 <body>
     <script>
-        function sum(a,b)
-        {
-            console.log(a+b);
+        // function sum(a,b)
+        // {
+        //     console.log(a+b);
 
-        }
-
-        function calc(a,b,c)
-        {
-            c(a,b);
+        // }
+        // function calc(a,b,c)
+        // {
+        //     c(a,b);
             
+        // }
+        // calc(10,20,sum)
+
+
+        function getData(dataid,getNextData)
+        {
+            setTimeout(()=>
+            {
+                console.log("data",dataid);
+                if(getNextData)
+                {
+                    getNextData();
+                }
+            },2000);
         }
-        calc(10,20,sum)
+        getData(1,()=>{
+            getData(2,()=>{
+                getData(3,()=>{
+                    getData(4);
+                })
+            })
+        });
     </script>
 </body>
 </html>
