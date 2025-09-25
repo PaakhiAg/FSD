@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <h1>Resume Builder</h1>
+    <label>Enter your name</label>
+    <input type="text" ><br><br>
+     <label>Enter your email address</label>
+    <input type="email"><br><br>
+     <label>Enter languages known</label>
+    <select>
+        <option>Java</option>
+        <option>Pyhton</option>
+        <option>C++</option>
+        <option>Golang/kotlin</option>
+    </select><br><br>
+
+    
+    
+    <button onclick="resume">Submit</button>
+    <p id="resume_builder"></p>
+    <script>
+        function resume()
+        {
+            let inputfield=document.getElementById("resume_builder");
+           let value = inputfield.value;
+           document.write(value);
+        }
+    </script>
+    </form>
+</body>
+</html>
