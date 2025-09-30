@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .heading{
+            text-align: center;
+            font-size: 40px;
+            margin-bottom: 30px;
+        }
+
+        .firstrow{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 10px auto;
+            gap: 10px;
+        }
+
+        .secondrow{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 10px auto;
+            gap: 10px;
+        }
+
+        #buttons{
+            padding:5px 10px; 
+        background:#007BFF; 
+        color:#fff; 
+        border:none; 
+        border-radius:5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="heading">
+         <h1>TO DO LIST</h1>
+    </div>
+
+    <div class="firstrow">
+        <img src="Screenshot 2025-09-11 101152.png" height="20px">
+        <input type="text" placeholder="Play">
+        <button id="buttons" onclick="add('go to market')">+</button>
+    </div>
+    <br>
+
+    <div id="tasks"></div>
+
+  <script>
+    let all=[];
+    function add(txt){
+      all.push(txt);
+      if(txt=="go to market")
+        tasks.innerHTML+=`<div class="row"><input value="${txt}"><button onclick="add('go to college')">+</button></div>`;
+      else if(txt=="go to college")
+        tasks.innerHTML+=`<div class="row"><input value="${txt}"><button onclick="add(List of All)">+</button></div>`;
+      
+        
+    }
+     function showAll() {
+      let listPage = `
+        <html>
+        <head>
+          <title>All Tasks</title>
+          <style>
+            body { font-family: Arial; text-align: center; padding: 20px; background: #fafafa; }
+            h1 { margin-bottom: 20px; }
+            ul { list-style: none; padding: 0; }
+            li { margin: 10px 0; font-size: 18px; }
+          </style>
+        </head>
+        <body>
+          <h1>To Do List</h1>
+          <ul>
+            ${allTasks.map(task => `<li>${task}</li>`).join("")}
+          </ul>
+        </body>
+        </html>
+      `;
+      const newWindow = window.open();
+      newWindow.document.write(listPage);
+    }
+
+
+
+
+    </script>
+
+    
+
+   
+    
+
+
+</body>
+</html>
+
+

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>To Do List</title>
+  <style>
+    body {
+        text-align:center; 
+        font-family:Arial; 
+        background:#f9f9f9;
+    }
+
+    .row {
+        margin:10px; 
+        display:flex; 
+        justify-content:center; 
+        gap:10px;
+    }
+
+    input {
+        padding:5px;
+    }
+
+    button {
+        padding:5px 10px; 
+        background:#007BFF; 
+        color:#fff; 
+        border:none; 
+        border-radius:5px;
+    }
+  </style>
+</head>
+<body>
+  <h1>To Do List</h1>
+
+  <div class="row">
+    <img src="https://cdn-icons-png.flaticon.com/512/1157/1157109.png">
+    <input placeholder="Enter task">
+    <button id="btn1">+</button>
+  </div>
+
+  <div id="tasks"></div>
+
+  <script>
+    let all = [];
+
+    function addRow(text, callback){
+      let row = document.createElement("div");
+      row.className = "row";
+
+      let inp = document.createElement("input");
+      inp.value = text;
+      all.push(text);
+
+      let btn = document.createElement("button");
+      btn.textContent = "+";
+      if(callback) btn.onclick = callback;
+
+      row.appendChild(inp);
+      row.appendChild(btn);
+      document.getElementById("tasks").appendChild(row);
+    }
+
+    // attach callbacks
+    document.getElementById("btn1").onclick = function(){ 
+      addRow("go to market", function(){ 
+        addRow("go to college", function(){ 
+          showAllButton();
+        }); 
+      });
+    };
+
+    function showAllButton(){
+      let row = document.createElement("div");
+      row.className = "row";
+      let btn = document.createElement("button");
+      btn.textContent = "List of All";
+      btn.onclick = showAll;
+      row.appendChild(btn);
+      document.getElementById("tasks").appendChild(row);
+    }
+
+    function showAll(){
+      let w = window.open();
+      w.document.write("<h1>To Do List</h1><ul>"+all.map(t=>"<li>"+t+"</li>").join("")+"</ul>");
+    }
+  </script>
+</body>
+</html>
