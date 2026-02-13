@@ -34,18 +34,22 @@
 // myserver.listen(8000, () => console.log("server is running"));
 
 // const fs=require('fs');
-// // fs.writeFileSync("./cse-c.txt","HI");    // ./ means current directory
+// // fs.writeFileSync("./cse-c.txt","HI");                      // ./ means current directory
 // const result=fs.readFileSync("./cse-c.txt","utf-8");
 // console.log(result);
 
 const fs = require('fs');
-fs.readFile("./cse-c.txt", "utf-8", (err, result) => {
-    if (err) {
-        console.log("Error:", err);
-    } else {
-        console.log(result);
-    }
-});
-console.log("File reading started...");
+// fs.readFile("./cse-c.txt", "utf-8", (err, result) => {
+//     if (err) {
+//         console.log("Error:", err);                          //use this code only in exam
+//     } else {
+//         console.log(result);
+//     }
+// });
+// console.log("File reading started...");
 
+// const fs=require('fs');
+// fs.writeFile("./cse-c.txt","hello",()=>{});
+
+// fs.appendFileSync("./cse-c.txt",`i am good`);
 
