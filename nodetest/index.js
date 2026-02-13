@@ -55,7 +55,18 @@ const fs = require('fs');
 
 // fs.cpSync("./cse-c.txt","b.txt");
 
-fs.copyFile("./cse-c.txt","b.txt",(err,result)=>{
+// fs.copyFile("./cse-c.txt","b.txt",(err,result)=>{
+//     if(err){
+//         console.log("Error!",err);
+//     }
+//     else{
+//         console.log(result);
+//     }
+// });
+
+// fs.unlinkSync("./cse-c.txt");
+
+fs.unlink("./cse-c.txt",(err,result)=>{
     if(err){
         console.log("Error!",err);
     }
