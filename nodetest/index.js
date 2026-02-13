@@ -53,3 +53,14 @@ const fs = require('fs');
 
 // fs.appendFileSync("./cse-c.txt",`i am good`);
 
+// fs.cpSync("./cse-c.txt","b.txt");
+
+fs.copyFile("./cse-c.txt","b.txt",(err,result)=>{
+    if(err){
+        console.log("Error!",err);
+    }
+    else{
+        console.log(result);
+    }
+});
+
